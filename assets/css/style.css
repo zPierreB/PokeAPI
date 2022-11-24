@@ -1,0 +1,49 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f3f3f3;
+}
+
+#pokeList {
+    margin: 0 auto;
+    width: 85vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    column-gap: 30px;
+    row-gap: 30px;
+}
+
+.onePokeCard {
+    width: 180px;
+    height: 260px;
+    border-radius: 15px;
+    background-color: #fff;
+    /* border: 10px solid #FFE364; */
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    text-align: center;
+    transition: 0.4s;
+    transform: scale(1) rotate(0deg);
+}
+
+.onePokeCard:hover {
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px -6px, rgba(0, 0, 0, 0.10) 0px 8px 12px -4px;
+    transform: scale(1.05) rotate(3deg);
+    transition: 0.4s;
+}
+
+.pokePic {
+    width: 80%;
+    height: 180px;
+    margin-top: 5px;
+    filter: drop-shadow(8px 8px 4px rgba(0, 0, 0, 0.1));
+}
+
+.pokeName {
+    font-weight: 600;
+}
+
+.pokeName::first-letter {
+    text-transform: uppercase;
+}
