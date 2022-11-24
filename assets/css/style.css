@@ -6,6 +6,14 @@ body {
     background-color: #f3f3f3;
 }
 
+h1 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 30px;
+    font-weight: 900;
+    color: #356ABC;
+    text-shadow: -5px 0 #ffcc03, 0 5px #ffcc03, 5px 0 #ffcc03, 0 -5px #ffcc03;
+}
+
 #pokeList {
     margin: 0 auto;
     width: 85vw;

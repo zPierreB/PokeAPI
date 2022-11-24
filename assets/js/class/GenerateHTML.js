@@ -1,5 +1,5 @@
 class GenerateHTML {
-    construtor(body) {
+    constructor(body) {
         this.body = body;
         this._figure = [];
     }
@@ -11,9 +11,9 @@ class GenerateHTML {
     set figure(value) {
         this._figure.push(value);
         console.log(value);
-        this._figure.map((element) => {
-            this.body.append(element)
-        })
+        this._figure.map(
+            this.body.append(value)
+        )
     }
 }
 

@@ -1,19 +1,21 @@
-const createPokemons = (pokemons) => {
-    const figure = document.createElement('figure');
-    for (const pokemon of pokemons) {
-        console.log(pokemon)
-        const div = document.createElement('div');
+const createPokemons = (pokemon, body) => {
+    // const pokemons = document.getElementById("pokeList");
+    const div = document.createElement('div');
+    
         const img = document.createElement('img');
         const h3 = document.createElement('h3');
-        
-        img.innerHTML = pokemon.url;
-        h3.innerHTML = pokemon.name;
+        body.setAttribute('id', 'pokeList');
+        div.classList.add('onePokeCard');
+        img.classList.add('pokePic');
+        h3.classList.add("pokeName");
 
+        img.setAttribute("src", pokemon.sprites.other.dream_world.front_default);
+        h3.innerHTML = pokemon.name;
+        // img.append(div)
         div.append(img);
         div.append(h3);
-        figure.append(div);
-    }
-    return figure;
+        body.append(div);
+        // figure.append(div);
 }
 
 export default createPokemons;

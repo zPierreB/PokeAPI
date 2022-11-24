@@ -5,7 +5,7 @@ import createPokemons from "./js/pokemons.js";
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    const pokemons = document.getElementById("pokeList");
+    
     // const pokemonsFR = document.getElementsByClassName(".onePokeCard");
 
     const body = document.querySelector('body');
@@ -18,9 +18,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     request.fetchData()
         .then(data => data.results.map(async(pokemon) => {
-            generateHTML.figure = createPokemons(pokemon.name);
+            await fetch(pokemon.url)
+                .then(response => response.json())
+                .then(data => createPokemons(data, body))
+                // .then(data => console.log(data))
         }))
-        .then()
+        // .then(data => console.log(data.results[0].url))
+            // console.log(pokemon);
+        //     generateHTML.figure = createPokemons(pokemon.name);
+        // )
         .catch(error => console.log(error));
     
     // request.fetchData()
