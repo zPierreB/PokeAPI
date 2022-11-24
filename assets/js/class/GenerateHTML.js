@@ -10,6 +10,7 @@ class GenerateHTML {
 
     set figure(value) {
         this._figure.push(value);
+        console.log(value);
         this._figure.map((element) => {
             this.body.append(element)
         })

@@ -12,12 +12,6 @@ class Request {
             .catch((error) => reject(error))
         })
     }
-
-    async fetchDataV2() {
-        let response = await fetch(`${this.url}`);
-        let data = await response.json()
-        console.log(data)
-    }
 }
 
 export default Request;
