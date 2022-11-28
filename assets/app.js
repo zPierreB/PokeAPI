@@ -9,32 +9,24 @@ document.addEventListener('DOMContentLoaded', () => {
     // const request = new Request(apiUrl);
     const test = new Pokemons();
 
-    // request.fetchData()
-    //     .then(data => data.results.map(async(pokemon) => {
-    //         fetch(pokemon.url)
-    //         .then(response => response.json())
-    //         .then(data => console.log(data))
-    //         .then(data => test.showPokemons(data, body))
-    //     }))
-    //     .catch(error => console.log(error));
-
-    const fetchPokemons = async() => {
+    // Fetch all pokemon
+    const fetchPokemons = async () => {
         const response = await fetch(apiUrl);
         return await response.json();
     }
-    
-    const fetchPokemon = async(url) => {
+
+    // Fetch 1 pokemon by recuperate the url with the id of the pokemon
+    const fetchPokemon = async (url) => {
         const response = await fetch(url);
         return await response.json();
     }
-    
-    
+
+    // loop my data to show all pokemons with their infos
     fetchPokemons()
-    .then(async(data) => {
-        for(const d of data.results) {
-            console.log(d)
-            const pokemon = await fetchPokemon(d.url)
-            test.showPokemons(pokemon, body)
-        }
-    });
+        .then(async (data) => {
+            for (const d of data.results) {
+                const pokemon = await fetchPokemon(d.url)
+                test.showPokemons(pokemon, body)
+            }
+        });
 })
