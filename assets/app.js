@@ -28,13 +28,37 @@ document.addEventListener('DOMContentLoaded', () => {
         return await response.json();
     }
     
+    const fetchPokemonColor = async(url) => {
+        const response = await fetch(url);
+        return await response.json()
+    }
     
     fetchPokemons()
     .then(async(data) => {
         for(const d of data.results) {
-            console.log(d)
             const pokemon = await fetchPokemon(d.url)
             test.showPokemons(pokemon, body)
+            test.showOnePokemon(pokemon, body)
+            // (async(poke) => {
+            //     for(const p of poke.species) {
+            //         const pokeColor = await fetchPokemonColor(p.url)
+            //         test.getOneColor(pokeColor)
+            //         // console.log(pokeColor);
+            //     }
+            // })
         }
     });
+
+
+    // fetchPokemons()
+    // .then(async(data) => {
+    //     for(const d of data.results) {
+    //         const pokemon = await fetchPokemon(d.url)
+    //         .then(async(poke) => {
+    //             const pokeColor = await fetchPokemonColor(poke.species.url)
+    //                 test.getColorPokemon(pokeColor)
+    //         })
+    //         test.showPokemons(pokemon, body)
+    //     }
+    // })
 })
