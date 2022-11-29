@@ -4,22 +4,22 @@ class Pokemons {
 
         const div = document.createElement('div');
         const divPokeList = document.getElementById('pokeList');
-        
+
         const img = document.createElement('img');
         const h3 = document.createElement('h3');
-        
+
 
         div.classList.add('onePokeCard');
         div.setAttribute("id", `${pokemon.id}`);
         img.classList.add('pokePic');
         h3.classList.add("pokeName");
-        
+
         img.setAttribute("src", pokemon.sprites.other.dream_world.front_default);
         h3.innerHTML = pokemon.name;
 
         div.append(img);
         div.append(h3);
-        
+
         divPokeList.append(div);
         body.append(divPokeList);
     }
