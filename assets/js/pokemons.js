@@ -55,7 +55,7 @@ class Pokemons {
 
             divCrose.addEventListener('click', () => {
                 divCardBG.remove();
-            }, {once: true})
+            })
 
             if(pokemon.types.length > 1) {
                 const h4 = document.createElement('h4');
@@ -66,7 +66,15 @@ class Pokemons {
                 divShowCard.append(h4);
                 h4.innerHTML += "Type: " + pokemon.types[0].type.name;
             }
-        }, {once: true});
+            // this.getColorPokemon("green");
+        });
+    }
+
+    getColorPokemon = (color) => {
+        const showCard = document.querySelectorAll('.showCard');
+        console.log(color.color.name);
+        showCard.style = `backgroundColor: ${color.color.name}`
+        return showCard;
     }
 }
 

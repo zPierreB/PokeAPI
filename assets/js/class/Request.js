@@ -14,14 +14,6 @@ class Request {
             .catch((error) => reject(error))
         })
     }
-
-    // fetchData = async() => {
-    //         await fetch(`${this.url}/${this.id}`)
-    //         // .then(data => console.log(data))
-    //         // .then((response) => response.json())
-    //         return response.json()
-    //         .catch((error) => console.log(error))
-    // }
 }
 
 export default Request;

@@ -1,5 +1,5 @@
 import Request from "./js/class/Request.js";
-import Pokemons from "./js/pokemons.js";
+import Pokemons from "./js/Pokemons.js";
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -30,28 +30,11 @@ document.addEventListener('DOMContentLoaded', () => {
     .then(async(data) => {
         for(const d of data.results) {
             const pokemon = await fetchPokemon(d.url)
+            const color = await fetchPokemonColor(pokemon.species.url)
+            console.log(color);
             test.showPokemons(pokemon, body)
             test.showOnePokemon(pokemon, body)
-            // (async(poke) => {
-            //     for(const p of poke.species) {
-            //         const pokeColor = await fetchPokemonColor(p.url)
-            //         test.getOneColor(pokeColor)
-            //         // console.log(pokeColor);
-            //     }
-            // })
+            test.getColorPokemon(color, body);
         }
     });
-
-
-    // fetchPokemons()
-    // .then(async(data) => {
-    //     for(const d of data.results) {
-    //         const pokemon = await fetchPokemon(d.url)
-    //         .then(async(poke) => {
-    //             const pokeColor = await fetchPokemonColor(poke.species.url)
-    //                 test.getColorPokemon(pokeColor)
-    //         })
-    //         test.showPokemons(pokemon, body)
-    //     }
-    // })
 })

@@ -69,7 +69,7 @@ h1 {
 }
 
 .cardBG {
-    position: absolute;
+    position: fixed;
     top: 0;
     width: 100vw;
     height: 100vh;
@@ -82,11 +82,8 @@ h1 {
 }
 
 .showCard {
-    background-color: #f3f3f3;
     border-radius: 6px;
     border: 8px solid #ffe165;
-    /* width: 240px;
-    height: 336px; */
     width: 272px;
     height: 375px;
 }
