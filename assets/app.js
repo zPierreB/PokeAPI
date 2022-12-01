@@ -31,7 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
         for(const d of data.results) {
             const pokemon = await fetchPokemon(d.url)
             const color = await fetchPokemonColor(pokemon.species.url)
-            console.log(color);
             test.showPokemons(pokemon, body)
             test.showOnePokemon(pokemon, body)
             test.getColorPokemon(color, body);
