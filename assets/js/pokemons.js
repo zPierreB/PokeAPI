@@ -28,7 +28,7 @@ class Pokemons {
 
         const getOneCard = document.getElementById(`${pokemon.id}`);
 
-        getOneCard.addEventListener('click', () => {
+        getOneCard.addEventListener('click', async() => {
 
             const divCrose = document.createElement('div');
             divCrose.innerHTML = 'X';
@@ -66,16 +66,25 @@ class Pokemons {
                 divShowCard.append(h4);
                 h4.innerHTML += "Type: " + pokemon.types[0].type.name;
             }
-            // this.getColorPokemon("green");
+            const fetchPokemonColor = async(url) => {
+                const response = await fetch(url);
+                return await response.json()
+            }
+
+            const color = await fetchPokemonColor(pokemon.species.url)
+            divShowCard.style.backgroundColor = color.color.name;
+            // console.log(color);
+            // this.getColorPokemon();
         });
     }
 
-    getColorPokemon = (color) => {
-        const showCard = document.querySelectorAll('.showCard');
-        console.log(color.color.name);
-        showCard.style = `backgroundColor: ${color.color.name}`
-        return showCard;
-    }
+    // getColorPokemon = (color) => {
+    //     for (const card of showCards) {
+           
+    //     }
+    //     console.log(color)
+    //     return color;
+    // }
 }
 
 export default Pokemons;

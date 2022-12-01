@@ -21,19 +21,12 @@ document.addEventListener('DOMContentLoaded', () => {
         return await response.json();
     }
     
-    const fetchPokemonColor = async(url) => {
-        const response = await fetch(url);
-        return await response.json()
-    }
-    
     fetchPokemons()
     .then(async(data) => {
         for(const d of data.results) {
             const pokemon = await fetchPokemon(d.url)
-            const color = await fetchPokemonColor(pokemon.species.url)
             test.showPokemons(pokemon, body)
             test.showOnePokemon(pokemon, body)
-            test.getColorPokemon(color, body);
         }
     });
 })
