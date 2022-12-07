@@ -5,7 +5,7 @@ import Pokemons from "./js/Pokemons.js";
 document.addEventListener('DOMContentLoaded', () => {
 
     const body = document.querySelector('body');
-    const apiUrl = `https://pokeapi.co/api/v2/pokemon/?limit=21`;
+    const apiUrl = `https://pokeapi.co/api/v2/pokemon/?limit=151`;
     // const request = new Request(apiUrl);
     const test = new Pokemons();
 
