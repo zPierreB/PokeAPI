@@ -81,7 +81,7 @@ class Pokemons {
                 `
             } else if (pokemon.types[0].type.name == "fighting") {
                 divShowCard.style = `
-                background:linear-gradient(-120deg, #a33918, #7d311d, #552b19);
+                background:linear-gradient(-120deg, #812d13, #a74227, #65301a);
                 `
                 imgContainer.style = `
                 background-image: url('./assets/img/backgroundPokemon/fightingBG.jpg');
@@ -153,7 +153,7 @@ class Pokemons {
                 `
             } else if(pokemon.types[0].type.name == "water") {
                 divShowCard.style = `
-                background:linear-gradient(-120deg, #021B79, #0575E6, #20439b);
+                background:linear-gradient(-120deg, #44BBEC, #89D4F6, #03A6E0);
                 `;
                 imgContainer.style = `
                 background-image: url('./assets/img/backgroundPokemon/waterBG.jpg');
@@ -161,7 +161,7 @@ class Pokemons {
                 `
             } else if(pokemon.types[0].type.name == "grass") {
                 divShowCard.style = `
-                background:linear-gradient(60deg, #074C00, #42A341, #B8E2A3);
+                background:linear-gradient(-120deg, #3f9e3b, #41cd3c, #359f44);
                 `;
                 imgContainer.style = `
                 background-image: url('./assets/img/backgroundPokemon/grassBG.jpg');
@@ -169,7 +169,7 @@ class Pokemons {
                 `;
             } else if(pokemon.types[0].type.name == "electric") {
                 divShowCard.style = `
-                background:linear-gradient(45deg, #7A1036, #FF7EBE, #F5D0E2);
+                background:linear-gradient(-120deg, #F1D235, #FCF374, #FAD601);
                 `
                 imgContainer.style = `
                 background-image: url('./assets/img/backgroundPokemon/psychicBG.jpg');
@@ -177,7 +177,7 @@ class Pokemons {
                 `
             } else if(pokemon.types[0].type.name == "psychic") {
                 divShowCard.style = `
-                background:linear-gradient(45deg, #7A1036, #FF7EBE, #F5D0E2);
+                background:linear-gradient(45deg, #6B2F82, #A48AC1, #966CAE);
                 `
                 imgContainer.style = `
                 background-image: url('./assets/img/backgroundPokemon/psychicBG.jpg');
@@ -193,15 +193,15 @@ class Pokemons {
                 `
             } else if(pokemon.types[0].type.name == "dragon") {
                 divShowCard.style = `
-                background:linear-gradient(45deg, #7A1036, #FF7EBE, #F5D0E2);
+                background:linear-gradient(-120deg, #6b7342, #757334 ,#524336);
                 `
                 imgContainer.style = `
-                background-image: url('./assets/img/backgroundPokemon/psychicBG.jpg');
+                background-image: url('./assets/img/backgroundPokemon/dragonBG.jpg');
                 background-size: cover;
                 `
             } else if(pokemon.types[0].type.name == "dark") {
                 divShowCard.style = `
-                background:linear-gradient(45deg, #7A1036, #FF7EBE, #F5D0E2);
+                background:linear-gradient(45deg, #0D1E26, #2B6D85, #284C62);
                 `
                 imgContainer.style = `
                 background-image: url('./assets/img/backgroundPokemon/psychicBG.jpg');
@@ -209,7 +209,7 @@ class Pokemons {
                 `
             } else if(pokemon.types[0].type.name == "fairy") {
                 divShowCard.style = `
-                background:linear-gradient(45deg, #7A1036, #FF7EBE, #F5D0E2);
+                background:linear-gradient(-120deg, #7A1036, #FF7EBE, #F5D0E2);
                 `
                 imgContainer.style = `
                 background-image: url('./assets/img/backgroundPokemon/psychicBG.jpg');
