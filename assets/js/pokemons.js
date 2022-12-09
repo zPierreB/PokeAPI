@@ -66,11 +66,7 @@ class Pokemons {
                 divShowCard.append(h4);
                 h4.innerHTML += "Type: " + pokemon.types[0].type.name;
             }
-            const fetchPokemonColor = async(url) => {
-                const response = await fetch(url);
-                return await response.json()
-            }
-
+            
             if (pokemon.types[0].type.name == "normal") {
                 divShowCard.style = `
                 background:linear-gradient(-120deg, #bab9b4, #f6f5f1, #d1d0cd);
@@ -234,49 +230,6 @@ class Pokemons {
             }
 
             console.log(pokemon.types[0].type.name);
-            // const color = await fetchPokemonColor(pokemon.species.url)
-            // console.log(color.color.name)
-            // if(color.color.name == "purple") {
-            //     divShowCard.style = `
-            //     background: linear-gradient(to bottom, #6441a5, #2a0845);
-            //     `
-            //     imgContainer.style = `
-            //     background-image: url('./assets/img/backgroundPokemon/purpleBG.jpg');
-            //     background-size: cover;
-            //     `
-            // } else if(color.color.name == "black") {
-            //     divShowCard.style = `
-            //     background:linear-gradient(to right, #040404, #000000, #656565);
-            //     `
-            //     imgContainer.style = `
-            //     background-image: url('./assets/img/backgroundPokemon/blackBG.jpg');
-            //     background-size: cover;
-            //     `
-            // } else if(color.color.name == "white") {
-            //     divShowCard.style = `
-            //     background:linear-gradient(45deg, #EEEEEE, #FAF8F9, #FFFFFF);
-            //     `
-            //     imgContainer.style = `
-            //     background-image: url('./assets/img/backgroundPokemon/whiteBG.jpg');
-            //     background-size: cover;
-            //     `
-            // } else if(color.color.name == "brown") {
-            //     divShowCard.style = `
-            //     background:linear-gradient(-120deg, #a33918, #7d311d, #552b19);
-            //     `
-            //     imgContainer.style = `
-            //     background-image: url('./assets/img/backgroundPokemon/brownBG.jpg');
-            //     background-size: cover;
-            //     `
-            // } else if(color.color.name == "gray") {
-            //     divShowCard.style = `
-            //     background:linear-gradient(-120deg, #93928e, #e3e2de, #a7a6a4);
-            //     `
-            //     imgContainer.style = `
-            //     background-image: url('./assets/img/backgroundPokemon/grayBG.jpg');
-            //     background-size: cover;
-            //     `
-            // }
         });
     }
 }

@@ -1,6 +1,4 @@
-import Request from "./js/class/Request.js";
 import Pokemons from "./js/Pokemons.js";
-
 
 document.addEventListener('DOMContentLoaded', () => {
 
