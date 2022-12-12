@@ -119,4 +119,12 @@ h1 {
     text-transform: uppercase;
 }
 
+.main {
+    width: 90%;
+    margin: 0 auto;
+}
 
+#formPokemon {
+    display: flex;
+    justify-content: center;
+}
